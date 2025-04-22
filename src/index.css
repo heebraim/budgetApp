@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body{
+    
+    font-family: cursive;
+    
+    
+    
+    
+    
+}
+
+input{
+
+text-align: center;
+color: black;
+border: 5px solid black;
+
+}
+#budgetdiv{
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
+    gap: 5px;
+    
+    
+}
+
+#name-amountdiv{
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    line-height: 30px;
+    
+}
+
+
+#button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    color: white;
+}
