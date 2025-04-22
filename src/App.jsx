@@ -228,143 +228,143 @@
 
 
 
-// import { parse } from 'postcss';
-// import React from 'react'
-// import { useState } from 'react';
+import { parse } from 'postcss';
+import React from 'react'
+import { useState } from 'react';
 
-// function App() {
-//   const[budget,setBudget]=useState("");
-//   const[amount,setAmount]=useState("");
-//   const[name,setName]=useState("");
-//   const[expensesdata,setExpensesData]=useState([]);
-//   const[amountspent,setAmountSpent]=useState(0);
-//   const[amountremain,setAmountRemain]=useState(0);
-//   const[message,setMessage]=useState("");
+function App() {
+  const[budget,setBudget]=useState("");
+  const[amount,setAmount]=useState("");
+  const[name,setName]=useState("");
+  const[expensesdata,setExpensesData]=useState([]);
+  const[amountspent,setAmountSpent]=useState(0);
+  const[amountremain,setAmountRemain]=useState(0);
+  const[message,setMessage]=useState("");
 
-//  const handleBtn=()=>{
-//   if(!budget){
+ const handleBtn=()=>{
+  if(!budget){
     
-//     setMessage("please enter budget amount")
-//     return
-//   }
+    setMessage("please enter budget amount")
+    return
+  }
 
-//   if(amount && name){
+  if(amount && name){
 
-//     let calculateAmountSpent=parseInt(amount) + parseInt(amountspent);
-//     setAmountSpent(calculateAmountSpent)
+    let calculateAmountSpent=parseInt(amount) + parseInt(amountspent);
+    setAmountSpent(calculateAmountSpent)
 
-//     let calculateAmountRemain = parseInt(budget)- parseInt(calculateAmountSpent)
-//     setAmountRemain(calculateAmountRemain)
-//     setName("")
-//     setAmount("")
+    let calculateAmountRemain = parseInt(budget)- parseInt(calculateAmountSpent)
+    setAmountRemain(calculateAmountRemain)
+    setName("")
+    setAmount("")
     
-//     let details={name, amount}
-//     setExpensesData([...expensesdata, details])
+    let details={name, amount}
+    setExpensesData([...expensesdata, details])
     
-//   }
-//   if( ! name){
+  }
+  if( ! name){
     
-//     setMessage("please fill name of expense")
-    
-    
-//   }
-//   if( ! amount || NaN){
+    setMessage("please fill name of expense")
     
     
-//     setMessage("please fill cost of expense")
+  }
+  if( ! amount || NaN){
     
-//   }
+    
+    setMessage("please fill cost of expense")
+    
+  }
 
 
 
   
-//  }
+ }
 
 
   
-//   return (
-//   <div>
-//       <br />
+  return (
+  <div>
+      <br />
 
-//       <h1 className='text-lg text-center'>IBB BUDGET APP</h1>
-//       <br />
+      <h1 className='text-lg text-center'>IBB BUDGET APP</h1>
+      <br />
 
-//       <div className='bg-red-600'>{message}</div>
-//       <br />
-//     <div>
-//       <span>BUDGET:</span><input  value={budget} type="number" placeholder='enter your budget' onChange={(e)=>setBudget(e.target.value)} />
-//     </div>
+      <div className='bg-red-600'>{message}</div>
+      <br />
+    <div>
+      <span>BUDGET:</span><input  value={budget} type="number" placeholder='enter your budget' onChange={(e)=>setBudget(e.target.value)} />
+    </div>
     
-//     <br />
+    <br />
 
-//     <div className='flex flex-col justify-center w-screen h-56 gap-5 align-middle bg-pink-500 g-pink-500'>
+    <div className='flex flex-col justify-center w-screen h-56 gap-5 align-middle bg-pink-500 g-pink-500'>
       
-//       <h1>ENTER YOUR EXPENSE</h1>
+      <h1>ENTER YOUR EXPENSE</h1>
 
-//       <input value={name} type="text" placeholder='enter name of expense' onChange={(e)=>setName(e.target.value)} />
+      <input value={name} type="text" placeholder='enter name of expense' onChange={(e)=>setName(e.target.value)} />
       
-//       <input value={amount} type="number" placeholder='enter cost of expense' onChange={(e)=>setAmount(e.target.value)}/>
+      <input value={amount} type="number" placeholder='enter cost of expense' onChange={(e)=>setAmount(e.target.value)}/>
       
-//       <button  className='flex justify-center w-1/2 text-2xl align-middle bg-white border-violet-500 border-5 text-violet-800' onClick={handleBtn}> ADD EXPENSE</button>
-//     </div>
+      <button  className='flex justify-center w-1/2 text-2xl align-middle bg-white border-violet-500 border-5 text-violet-800' onClick={handleBtn}> ADD EXPENSE</button>
+    </div>
 
 
 
 
-//     <div>
+    <div>
                 
-//       <p> budget: {budget}</p>
-//       <p> amountspent: {amountspent}</p>
-//       <p> amountremain: {amountremain}</p>
+      <p> budget: {budget}</p>
+      <p> amountspent: {amountspent}</p>
+      <p> amountremain: {amountremain}</p>
 
               
-//     </div>
+    </div>
     
-//      <br />
+     <br />
      
-//       <div>
-//       <h1>EXPENSES SO FAR:</h1>
+      <div>
+      <h1>EXPENSES SO FAR:</h1>
     
-//         {
+        {
 
-//           expensesdata.map((item,i)=>
+          expensesdata.map((item,i)=>
               
-//               <div className='flex gap-5 bg-pink-400' >
-//                 <span>{i+1}.</span>
-//                 <span>{item.name}</span>
-//                 <span>{item.amount}</span>
-//               </div>
+              <div className='flex gap-5 bg-pink-400' >
+                <span>{i+1}.</span>
+                <span>{item.name}</span>
+                <span>{item.amount}</span>
+              </div>
               
-//           )
+          )
 
-//         }
-//       </div>
+        }
+      </div>
 
 
    
     
       
-//   </div>
+  </div>
     
-//   )
-// }
-
-// export default App
-
-import React from 'react'
-import Testingbudget from './Testingbudget'
-
-function App() {
-  return (
-    <div>
-      
-      <Testingbudget/>
-      
-    </div>
   )
 }
 
 export default App
+
+// import React from 'react'
+// import Testingbudget from './Testingbudget'
+
+// function App() {
+//   return (
+//     <div>
+      
+//       <Testingbudget/>
+      
+//     </div>
+//   )
+// }
+
+// export default App
 
 
 
