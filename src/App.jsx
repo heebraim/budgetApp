@@ -242,10 +242,26 @@ function App() {
   const[message,setMessage]=useState("");
 
  const handleBtn=()=>{
+  
   if(!budget){
     
     setMessage("please enter budget amount")
     return
+  }
+
+  if( !name || !/^[A-Za-z]+$/.test(name)){
+  
+    
+    setMessage("please fill name of expense");
+    return;
+    
+    
+  }
+  if( ! amount || isNaN(amount)){
+    
+    
+    setMessage("please fill cost of expense")
+    
   }
 
   if(amount && name){
@@ -262,18 +278,7 @@ function App() {
     setExpensesData([...expensesdata, details])
     
   }
-  if( ! name){
-    
-    setMessage("please fill name of expense")
-    
-    
-  }
-  if( ! amount || NaN){
-    
-    
-    setMessage("please fill cost of expense")
-    
-  }
+
 
 
 
